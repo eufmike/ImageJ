@@ -32,7 +32,7 @@ for(s = 0; s < seriesCount; s++){
 	showProgress(s, seriesCount);	
 	run("Bio-Formats Importer", 
 	"open=[" + filedir + 
-	"] color_mode=Composite rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT series_"+ s);
+	"] color_mode=Composite rois_import=[ROI manager] view=Hyperstack stack_order=XYCZT series_"+ series);
 	
 	saveAs("Tiff", outputdir + baseName + 'series_' + series + '.tif');
 	run("Close All");
